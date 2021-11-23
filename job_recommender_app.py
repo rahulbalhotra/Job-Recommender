@@ -92,7 +92,7 @@ df = pd.read_csv("naukri_com-job_sample.csv")
 st.subheader("Job_title    Skills     Salary    Location")
 
 i = 0 
-while i < 10:
+while i < 11:
     k = random.randint(1,8000)
     if 'IT' or 'Data' or 'analy' in df['skills'].lower() :
         st.write(i,df['jobtitle'][k],'|',df['skills'][k],'|',df['payrate'][k],'|',df['joblocation_address'][k])
