@@ -92,5 +92,5 @@ df = pd.read_csv("naukri_com-job_sample.csv")
 for ind in range(12):
     k = random.randint(1,1000)
     if 'analy' or 'IT' or 'business' or 'data'  in df['skills'][k]:
-        st.markdown(df['jobtitle'][k],end='')
+        st.markdown(df['jobtitle'][k])
         st.markdown(df['payrate'][k])
