@@ -89,11 +89,9 @@ st.markdown(match_string)
 st.title("Jobs available")
 df = pd.read_csv("naukri_com-job_sample.csv")
 
-df1 = pd.DataFrame(columns= ['job title', 'location', 'payrate'])
-
-st.table(df1)
-
-for ind in range(12):
-    k = random.randint(1,1000)
-    if 'analy' or 'IT' or 'business' or 'data'  in df['skills'][k]:
-        st.table(st.write(df['jobtitle'][k],df['payrate'][k]))
+i = 0 
+while i < 10:
+    if 'IT' or 'Data' or 'analy' in df['skills'].lower() :
+        st.write(df['jobtitle'][i],df['skills'][i],df['payrate'][i],df['joblocation_address'][i])
+        i+=1
+  
