@@ -90,4 +90,4 @@ df = pd.read_csv("naukri_com-job_sample.csv")
 
 for ind in range(20,100):
     if 'analy' or 'IT' or 'business' or 'data'  in df['skills'][ind]:
-        st.markdown(df['jobtitle'][ind],df['joblocation_address'][ind],df['payrate'][ind])
+        st.markdown(df['jobtitle'][ind])
