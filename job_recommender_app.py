@@ -30,6 +30,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 if uploaded_file is not None:
     info = PyPDF4.PdfFileReader(uploaded_file)
     
+    
 user_input = info.getPage(0).extractText()    
 user_input = str(user_input)
 user_input = re.sub('[^a-zA-Z0-9\.]', ' ', user_input)
@@ -88,4 +89,4 @@ st.markdown(match_string)
 
 
 df = pd.read_csv("naukri_com-job_sample.csv")
-st.df.head(10)
+st.table(df)
