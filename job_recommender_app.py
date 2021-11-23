@@ -23,10 +23,11 @@ st.sidebar.markdown("Scroll Down to See All Functionalities!")
 
 #Get and transform user's resume or linkedin
 
-#user_input = st.text_area("copy and paste your resume or linkedin here", '')
+user_input = st.text_area("copy and paste your resume or linkedin here", '')
 uploaded_file = st.file_uploader("Upload")
 if uploaded_file is not None:
     info = PyPDF4.PdfFileReader(uploaded_file)
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
 
 user_input = info.getPage(0).extractText()    
 user_input = str(user_input)
