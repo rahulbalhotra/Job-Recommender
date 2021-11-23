@@ -28,7 +28,7 @@ uploaded_file = st.file_uploader("Upload")
 if uploaded_file is not None:
     info = PyPDF4.PdfFileReader(uploaded_file)
 
-user_input = pdfReader.getPage(0).extractText()    
+user_input = info.getPage(0).extractText()    
 user_input = str(user_input)
 user_input = re.sub('[^a-zA-Z0-9\.]', ' ', user_input)
 user_input = user_input.lower()
