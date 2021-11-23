@@ -88,6 +88,6 @@ st.markdown(match_string)
 
 
 df = pd.read_csv("naukri_com-job_sample.csv")
-
-jobs = df[df['skills'].str.contains('IT')]
-st.table(jobs)
+for ind in df.index:
+    if search('IT', df['skills'][ind]):
+        print(df['jobtitle'][ind], df['company'][ind],df['experience'][ind], df['skills'][ind],df['payrate'][ind],df['industry'][ind])
