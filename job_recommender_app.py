@@ -89,7 +89,7 @@ st.markdown(match_string)
 st.title("Jobs available")
 df = pd.read_csv("naukri_com-job_sample.csv")
 
-st.subheader("Job_title    Skills     Salary    Location")
+st.table(st.subheader("Job_title    Skills     Salary    Location"))
 
 i = 0 
 while i < 10:
