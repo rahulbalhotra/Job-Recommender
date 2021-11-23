@@ -84,7 +84,7 @@ match_string = ' '.join(matches)
 misses_string = ' '.join(misses)
 
 st.markdown('Best jobs:')
-st.markdown(match_string.type)
+st.markdown(type(match_string))
 
 #
 #df = pd.read_csv("naukri_com-job_sample.csv")
