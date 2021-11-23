@@ -88,6 +88,6 @@ st.markdown(match_string)
 
 
 df = pd.read_csv("naukri_com-job_sample.csv")
-for ind in range(10):
+for ind in df.index:
     if str(match_string) in df['skills'][ind]:
         st.markdown(df['jobtitle'][ind])
