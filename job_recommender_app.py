@@ -89,5 +89,5 @@ st.markdown(match_string)
 
 df = pd.read_csv("naukri_com-job_sample.csv")
 
-jobs = df[df['skills'].str.contains(match_string))
+jobs = df[df['skills'].str.contains(match_string)]
 st.table(jobs)
