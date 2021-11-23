@@ -7,6 +7,7 @@ import word_similarity
 import pickle
 import re
 import PyPDF4
+import random
 
 #Introduce App
 st.title('Job Recommender')
@@ -88,6 +89,6 @@ st.markdown(match_string)
 st.title("Jobs available")
 df = pd.read_csv("naukri_com-job_sample.csv")
 
-for ind in range(20,100):
+for random.randint(1,5000) in range(12):
     if 'analy' or 'IT' or 'business' or 'data'  in df['skills'][ind]:
         st.markdown(df['jobtitle'][ind])
