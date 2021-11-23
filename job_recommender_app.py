@@ -84,10 +84,10 @@ match_string = ' '.join(matches)
 misses_string = ' '.join(misses)
 
 st.markdown('Best jobs:')
-st.markdown(match_string)
+st.markdown(match_string.type)
 
-
-df = pd.read_csv("naukri_com-job_sample.csv")
-for ind in df.index:
-    if str(match_string) in df['skills'][ind]:
-        st.markdown(df['jobtitle'][ind])
+#
+#df = pd.read_csv("naukri_com-job_sample.csv")
+#for ind in df.index:
+#    if str(match_string) in df['skills'][ind]:
+#        st.markdown(df['jobtitle'][ind])
