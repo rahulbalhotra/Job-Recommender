@@ -23,6 +23,7 @@ st.sidebar.markdown("Scroll Down to See All Functionalities!")
 #Get and transform user's resume or linkedin
 
 user_input = st.text_area("copy and paste your resume or linkedin here", '')
+st.file_uploader("Upload", type=None)
 
 user_input = str(user_input)
 user_input = re.sub('[^a-zA-Z0-9\.]', ' ', user_input)
@@ -76,7 +77,5 @@ matches, misses = word_similarity.resume_reader(user_input, option)
 match_string = ' '.join(matches)
 misses_string = ' '.join(misses)
 
-st.markdown('Matching Words:')
+st.markdown('Best jobs:')
 st.markdown(match_string)
-st.markdown('Missing Words:')
-st.markdown(misses_string)
