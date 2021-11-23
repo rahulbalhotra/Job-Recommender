@@ -75,8 +75,7 @@ st.markdown('This function shows you which keywords your resume either contains 
 st.markdown("The displayed keywords are stemmed, ie 'analysis' --> 'analys' and 'commision' --> 'commiss'")
 option = st.selectbox(
     'Which job would you like to compare to?',
- ('ux,designer', 'data,analyst', 'project,manager', 'product,manager', 'account,manager', 'consultant', 'marketing', 'sales',
- 'data,scientist'))
+ ('ux designer', 'data analyst', 'project manager', 'product manager', 'account manager', 'consultant', 'marketing', 'sales', 'data,scientist'))
 
 st.write('Preference: ', option)
 matches, misses = word_similarity.resume_reader(user_input, option)
