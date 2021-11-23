@@ -6,6 +6,11 @@ import matplotlib.pyplot as plt
 import word_similarity
 import pickle
 import re
+from pdfminer.high_level import extract_text
+
+
+def extract_text_from_pdf(pdf_path):
+    return extract_text(pdf_path)
 
 #Introduce App
 st.title('Job Recommender')
@@ -22,8 +27,10 @@ st.sidebar.markdown("Scroll Down to See All Functionalities!")
 
 #Get and transform user's resume or linkedin
 
-user_input = st.text_area("copy and paste your resume or linkedin here", '')
-st.file_uploader("Upload", type=None)
+#user_input = st.text_area("copy and paste your resume or linkedin here", '')
+uploaded_file = st.file_uploader("Upload")
+if uploaded_file is not None:
+    user_input = extract_text_from_pdf(uploaded_file)
 
 user_input = str(user_input)
 user_input = re.sub('[^a-zA-Z0-9\.]', ' ', user_input)
