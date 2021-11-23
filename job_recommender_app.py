@@ -89,5 +89,5 @@ st.markdown(match_string)
 
 df = pd.read_csv("naukri_com-job_sample.csv")
 for ind in df.index:
-    if search('IT', df['skills'][ind]):
+    if 'IT' in df['skills'][ind]:
         print(df['jobtitle'][ind], df['company'][ind],df['experience'][ind], df['skills'][ind],df['payrate'][ind],df['industry'][ind])
