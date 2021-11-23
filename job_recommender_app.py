@@ -25,6 +25,8 @@ st.sidebar.markdown("Scroll Down to See All Functionalities!")
 
 user_input = st.text_area("copy and paste your resume or linkedin here", '')
 uploaded_file = st.file_uploader("Upload")
+st.set_option('deprecation.showfileUploaderEncoding', False)
+
 if uploaded_file is not None:
     info = PyPDF4.PdfFileReader(uploaded_file)
     
