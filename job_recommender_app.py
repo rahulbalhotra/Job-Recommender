@@ -94,6 +94,6 @@ st.subheader("Job_title    Skills     Salary    Location")
 i = 0 
 while i < 11:
     k = random.randint(1,8000)
-    if match_string in df['skills'].lower() :
+    if "IT" or "analy" or "soft" or "data" in df['skills'].lower() :
         st.write(i,df['jobtitle'][k],'|',df['skills'][k],'|',df['payrate'][k],'|',df['joblocation_address'][k])
         i+=1
