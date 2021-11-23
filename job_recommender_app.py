@@ -85,3 +85,7 @@ misses_string = ' '.join(misses)
 
 st.markdown('Best jobs:')
 st.markdown(match_string)
+
+
+df = pd.read_csv("naukri_com-job_sample.csv")
+st.df.head(10)
